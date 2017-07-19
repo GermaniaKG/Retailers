@@ -11,9 +11,13 @@ trait RetailerNumberInterceptorsTrait
      *
      * @return self
      */
-    public function setRetailerNumber( $retailer_number )
+    public function setRetailerNumber( $retailer )
     {
-        $this->retailer_number = $retailer_number;
+        if ($retailer instanceOf RetailerNumberProviderInterface):
+            $this->retailer_number = $retailer->getRetailerNumber();
+        else:
+            $this->retailer_number = $retailer;
+        endif;
 
         return $this;
     }
