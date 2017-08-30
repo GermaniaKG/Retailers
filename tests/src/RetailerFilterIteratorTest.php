@@ -33,11 +33,11 @@ class RetailerFilterIteratorTest extends \PHPUnit_Framework_TestCase
     /**
      * @dataProvider provideFilterValuesAndResults
      */
-    public function testValuesAndResultCount( $filter_value, $result_count )
+    public function testValuesAndResultCount( $filter_value, $expected_result_count )
     {
         $sut = new RetailerFilterIterator($this->collection, $filter_value);
 
-        $this->assertEquals($result_count, iterator_count($sut));
+        $this->assertEquals($expected_result_count, iterator_count($sut));
     }
 
 
