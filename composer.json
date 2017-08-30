@@ -1,7 +1,8 @@
 {
 	"name": "germania-kg/retailers",
 
-	"license": "proprietary",
+	"license": "MIT",
+
 	"authors": [
 		{
 			"name": "Carsten Witt",
