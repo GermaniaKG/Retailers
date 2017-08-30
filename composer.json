@@ -1,5 +1,6 @@
 {
 	"name": "germania-kg/retailers",
+	"description": "Work with Retailers: Interfaces, Traits, FilterIterator",
 
 	"license": "MIT",
 
