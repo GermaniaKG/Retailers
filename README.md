@@ -47,7 +47,7 @@ public function getRetailerNumber()
 
 ### RetailerNumberInterceptorsTrait
 
-Objects using this trait will provide anything that *is*RetailerNumberProviderInterface** provides, and additionally a setter method `setRetailerNumber` which accepts anything; if **RetailerNumberProviderInterface** given here, *getRetailerNumber* method will be called to obtain the ID to use. Roughly outlined:
+Objects using this trait will provide anything that **RetailerNumberProviderInterface** provides, and additionally a setter method `setRetailerNumber` which accepts anything; if **RetailerNumberProviderInterface** given here, *getRetailerNumber* method will be called to obtain the ID to use. Roughly outlined:
 
 ```php
 use RetailerNumberProviderTrait;
