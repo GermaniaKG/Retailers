@@ -33,18 +33,42 @@ class RetailerFilterIteratorTest extends \PHPUnit_Framework_TestCase
     /**
      * @dataProvider provideFilterValuesAndResults
      */
-    public function testValuesAndResultCount( $filter_value, $expected_result_count )
+    public function testPrimitiveFilterValuesAndResultCount( $filter_value, $expected_result_count )
     {
-        $sut = new RetailerFilterIterator($this->collection, $filter_value);
+        $sut1 = new RetailerFilterIterator($this->collection, $filter_value);
+        $this->assertEquals($expected_result_count, iterator_count($sut1));
 
+    }
+
+    /**
+     * @dataProvider provideFilterValuesAndResults
+     */
+    public function testRetailerNumberProviderInterfaceFilterValuesAndResultCount( $filter_value, $expected_result_count )
+    {
+        $provider = $this->prophesize( RetailerNumberProviderInterface::class );
+        $provider->getRetailerNumber()->willReturn( $filter_value );
+
+        $sut = new RetailerFilterIterator($this->collection, $provider->reveal() );
         $this->assertEquals($expected_result_count, iterator_count($sut));
+
+    }
+
+
+    /**
+     * @dataProvider provideFilterValuesAndResults
+     */
+    public function testEmptyResultList( $filter_value, $expected_result_count )
+    {
+        $invalid = [ 'Not_a_RetailerNumberProviderInterface' ];
+
+        $sut = new RetailerFilterIterator(new \ArrayIterator( $invalid ), $filter_value);
+        $this->assertEquals(0, iterator_count($sut));
     }
 
 
 
     public function provideFilterValuesAndResults()
     {
-
         $parameter_sets = array();
         return array(
             // filter for     // expected result
@@ -64,7 +88,7 @@ class RetailerFilterIteratorTest extends \PHPUnit_Framework_TestCase
             [ array(),        0 ],
             [ array(0),       0 ],
             [ array(66,55),   0 ],
-            [ null,           0 ],
+            [ null,           0 ]
         );
 
     }
