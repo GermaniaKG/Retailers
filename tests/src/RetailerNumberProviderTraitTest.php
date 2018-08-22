@@ -2,8 +2,9 @@
 namespace tests;
 
 use Germania\Retailers\RetailerNumberProviderTrait;
+use PHPUnit\Framework\TestCase;
 
-class RetailerNumberProviderTraitTest extends \PHPUnit_Framework_TestCase
+class RetailerNumberProviderTraitTest extends TestCase
 {
     public function testGetInterceptor()
     {
