@@ -1,15 +1,13 @@
 <?php
 namespace Germania\Retailers;
 
-interface RetailerNumberInterceptorsInterface extends RetailerNumberProviderInterface
+/**
+ * BC Layer for RetailerNumberAwareInterface.
+ *
+ * This interface will be removed soon.
+ */
+interface RetailerNumberInterceptorsInterface extends RetailerNumberAwareInterface
 {
 
-    /**
-     * Sets the Retailer number.
-     *
-     * @param  int|string $retailer_number
-     * @return self
-     */
-    public function setRetailerNumber( $retailer_number );
 
 }
