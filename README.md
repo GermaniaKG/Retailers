@@ -22,7 +22,9 @@ $ composer require germania-kg/retailers
 public function getRetailerNumber()
 ```
 
-### RetailerNumberInterceptorsInterface
+### RetailerNumberAwareInterface
+
+(formlery known as **RetailerNumberInterceptorsInterface** which will be removed with release 2.0)
 
 
 ```php
@@ -45,7 +47,9 @@ public function getRetailerNumber()
 
 
 
-### RetailerNumberInterceptorsTrait
+### RetailerNumberAwareTrait
+
+(formerly known as **RetailerNumberInterceptorsTrait** which will be removed with release 2.0))
 
 Objects using this trait will provide anything that **RetailerNumberProviderInterface** provides, and additionally a setter method `setRetailerNumber` which accepts anything; if **RetailerNumberProviderInterface** given here, *getRetailerNumber* method will be called to obtain the ID to use. Roughly outlined:
 
@@ -53,8 +57,6 @@ Objects using this trait will provide anything that **RetailerNumberProviderInte
 use RetailerNumberProviderTrait;
 public function setRetailerNumber( $id )
 ```
-
-
 
 
 
@@ -81,12 +83,12 @@ echo $retailer->getRetailerNumber(); // 99
 
 ```php
 <?php
-use Germania\Retailers\RetailerNumberInterceptorsInterface;
-use Germania\Retailers\RetailerNumberInterceptorsTrait;
+use Germania\Retailers\RetailerNumberAwareInterface;
+use Germania\Retailers\RetailerNumberAwareTrait;
 
-class MyOrder implements RetailerNumberInterceptorsInterface
+class MyOrder implements RetailerNumberAwareInterface
 {
-	use RetailerNumberInterceptorsTrait;
+	use RetailerNumberAwareTrait;
 }
 
 $order = new MyOrder;
@@ -160,6 +162,12 @@ $filter = new RetailerFilterIterator( new \ArrayIterator( $orders ), $retailer);
 echo iterator_count($filter);
 ```
 
+## Roadmap
+
+**Version 2:** 
+
+- *RetailerNumberInterceptorsInterface* and *RetailerNumberInterceptorsTrait* will be removed.
+- PHP 7.1+ required
 
 ## Issues
 
@@ -168,8 +176,8 @@ echo iterator_count($filter);
 
 See [full issues list.][i0]
 
-[i0]: https://github.com/GermaniaKG/Retailers/issues 
-[i1]: https://github.com/GermaniaKG/Retailers/issues/1 
+[i0]: https://github.com/GermaniaKG/Retailers/issues
+[i1]: https://github.com/GermaniaKG/Retailers/issues/1
 
 
 ## Development
