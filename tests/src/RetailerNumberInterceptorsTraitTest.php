@@ -3,8 +3,9 @@ namespace tests;
 
 use Germania\Retailers\RetailerNumberInterceptorsTrait;
 use Germania\Retailers\RetailerNumberProviderInterface;
+use PHPUnit\Framework\TestCase;
 
-class RetailerNumberInterceptorsTraitTest extends \PHPUnit_Framework_TestCase
+class RetailerNumberInterceptorsTraitTest extends TestCase
 {
     public function testGetterAndSetter()
     {

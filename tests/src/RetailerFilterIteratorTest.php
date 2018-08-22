@@ -3,9 +3,9 @@ namespace tests;
 
 use Germania\Retailers\RetailerFilterIterator;
 use Germania\Retailers\RetailerNumberProviderInterface;
+use PHPUnit\Framework\TestCase;
 
-
-class RetailerFilterIteratorTest extends \PHPUnit_Framework_TestCase
+class RetailerFilterIteratorTest extends TestCase
 {
 
     public $collection;
