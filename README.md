@@ -1,4 +1,4 @@
-# Germania\Retailers
+# Germania KG · Retailers
 
 [![Build Status](https://travis-ci.org/GermaniaKG/Retailers.svg?branch=master)](https://travis-ci.org/GermaniaKG/Retailers)
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/GermaniaKG/Retailers/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/GermaniaKG/Retailers/?branch=master)
@@ -24,8 +24,6 @@ public function getRetailerNumber()
 
 ### RetailerNumberAwareInterface
 
-(formlery known as **RetailerNumberInterceptorsInterface** which will be removed with release 2.0)
-
 
 ```php
 extends RetailerNumberProviderInterface
@@ -48,8 +46,6 @@ public function getRetailerNumber()
 
 
 ### RetailerNumberAwareTrait
-
-(formerly known as **RetailerNumberInterceptorsTrait** which will be removed with release 2.0))
 
 Objects using this trait will provide anything that **RetailerNumberProviderInterface** provides, and additionally a setter method `setRetailerNumber` which accepts anything; if **RetailerNumberProviderInterface** given here, *getRetailerNumber* method will be called to obtain the ID to use. Roughly outlined:
 
@@ -164,10 +160,9 @@ echo iterator_count($filter);
 
 ## Roadmap
 
-**Version 2:** 
+**Version 2.1:** 
 
-- *RetailerNumberInterceptorsInterface* and *RetailerNumberInterceptorsTrait* will be removed.
-- PHP 7.1+ required
+- Use Scalar type declarations; requires PHP 7.0+
 
 ## Issues
 

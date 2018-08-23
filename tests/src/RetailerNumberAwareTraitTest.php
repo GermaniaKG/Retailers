@@ -1,7 +1,7 @@
 <?php
 namespace tests;
 
-use Germania\Retailers\RetailerNumberInterceptorsTrait;
+use Germania\Retailers\RetailerNumberAwareTrait;
 use Germania\Retailers\RetailerNumberProviderInterface;
 use PHPUnit\Framework\TestCase;
 
@@ -9,7 +9,7 @@ class RetailerNumberInterceptorsTraitTest extends TestCase
 {
     public function testGetterAndSetter()
     {
-        $mock = $this->getMockForTrait(RetailerNumberInterceptorsTrait::class);
+        $mock = $this->getMockForTrait(RetailerNumberAwareTrait::class);
 
         $retailer_number = 3;
 
@@ -22,7 +22,7 @@ class RetailerNumberInterceptorsTraitTest extends TestCase
 
     public function testSetterWithRetailerNumberProviderInterface()
     {
-        $mock = $this->getMockForTrait(RetailerNumberInterceptorsTrait::class);
+        $mock = $this->getMockForTrait(RetailerNumberAwareTrait::class);
 
         // Make sure we are really changing the number here
         $retailer_number = 3;
