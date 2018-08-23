@@ -5,7 +5,7 @@ class RetailerFilterIterator extends \FilterIterator
 {
 
     /**
-     * @var mixed
+     * @var array
      */
     public $retailer_filter;
 
