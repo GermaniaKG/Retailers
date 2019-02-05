@@ -1,30 +1,42 @@
 {
-	"name": "germania-kg/retailers",
-	"description": "Work with Retailers: Interfaces, Traits, FilterIterator",
+    "name": "germania-kg/retailers",
+    "description": "Work with Retailers: Interfaces, Traits, FilterIterator",
 
-	"license": "MIT",
+    "license": "MIT",
 
-	"authors": [
-		{
-			"name": "Carsten Witt",
-			"email": "carstenwitt@germania-kg.de",
-			"role": "Developer"
-		}
-	],
-	"autoload": {
-		"psr-4": {
-			"Germania\\Retailers\\": "src/"
-		}
-	},
+    "authors": [
+        {
+            "name": "Carsten Witt",
+            "email": "carstenwitt@germania-kg.de",
+            "role": "Developer"
+        }
+    ],
 
-  "autoload-dev": {
-      "psr-4": { "tests\\": "tests/src" }
-  },
+    "autoload": {
+        "psr-4": {
+            "Germania\\Retailers\\": "src/"
+        }
+    },
 
-	"require": {
-	},
-	"require-dev": {
-		"php-coveralls/php-coveralls": "^2.0",
-		"phpunit/phpunit": "^5.7|^6.0"
-	}
+    "autoload-dev": {
+          "psr-4": { "tests\\": "tests/src" }
+    },
+
+    "require": {
+        "php": "^5.6|^7.0"
+    },
+
+    "require-dev": {
+        "php-coveralls/php-coveralls": "^2.0",
+        "phpunit/phpunit": "^5.7|^6.0|^7.0"
+    },
+
+    "scripts": {
+        "phpunit": "phpunit",
+
+        "test": [
+            "@phpunit"
+        ]
+    }
+
 }
