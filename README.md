@@ -1,12 +1,13 @@
 # Germania KG · Retailers
 
-[![Build Status](https://travis-ci.org/GermaniaKG/Retailers.svg?branch=master)](https://travis-ci.org/GermaniaKG/Retailers)
+[![PHP version](https://img.shields.io/packagist/php-v/germania-kg/retailers.svg)](https://packagist.org/packages/germania-kg/retailers)
+[![Build Status](https://img.shields.io/travis/GermaniaKG/Retailers.svg?label=Travis%20CI)](https://travis-ci.org/GermaniaKG/Retailers)
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/GermaniaKG/Retailers/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/GermaniaKG/Retailers/?branch=master)
 [![Code Coverage](https://scrutinizer-ci.com/g/GermaniaKG/Retailers/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/GermaniaKG/Retailers/?branch=master)
 [![Build Status](https://scrutinizer-ci.com/g/GermaniaKG/Retailers/badges/build.png?b=master)](https://scrutinizer-ci.com/g/GermaniaKG/Retailers/build-status/master)
 
 
-## Installation
+## Installation with Composer
 
 ```bash
 $ composer require germania-kg/retailers
@@ -179,17 +180,17 @@ See [full issues list.][i0]
 
 ```bash
 $ git clone https://github.com/GermaniaKG/Retailers.git
-$ cd Retailers.git
+$ cd Retailers
 $ composer install
 ```
 
 ## Unit tests
 
-Either copy `phpunit.xml.dist` to `phpunit.xml` and adapt to your needs, or leave as is. 
-Run [PhpUnit](https://phpunit.de/) like this:
+Either copy `phpunit.xml.dist` to `phpunit.xml` and adapt to your needs, or leave as is. Run [PhpUnit](https://phpunit.de/) test or composer scripts like this:
 
 ```bash
+$ composer test
+# or
 $ vendor/bin/phpunit
 ```
-
 
