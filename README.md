@@ -1,5 +1,6 @@
 # Germania KG · Retailers
 
+[![Packagist](https://img.shields.io/packagist/v/germania-kg/retailers.svg?style=flat)](https://packagist.org/packages/germania-kg/retailers)
 [![PHP version](https://img.shields.io/packagist/php-v/germania-kg/retailers.svg)](https://packagist.org/packages/germania-kg/retailers)
 [![Build Status](https://img.shields.io/travis/GermaniaKG/Retailers.svg?label=Travis%20CI)](https://travis-ci.org/GermaniaKG/Retailers)
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/GermaniaKG/Retailers/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/GermaniaKG/Retailers/?branch=master)
