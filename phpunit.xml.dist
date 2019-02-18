@@ -18,13 +18,6 @@
 		</whitelist>
 	</filter>
 
-	<php>
-		<var name="DB_DSN"    value="any_database_dsn" />
-		<var name="DB_USER"   value="username" />
-		<var name="DB_PASSWD" value="topsecret" />
-		<var name="DB_DBNAME" value="database_name" />
-	</php>
-
 	<logging>
 		<log type="coverage-clover" target="var/build/logs/clover.xml"/>
 		<log type="coverage-html"   target="var/build/logs/html/"/>
